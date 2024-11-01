@@ -24,6 +24,7 @@ form {
 
 /* Lomake-elementtien tyyli */
 label {
+    margin: 10px;
     font-weight: bold;
     color: #ff6600; /* Oranssi */
 }
@@ -57,6 +58,9 @@ input[type="radio"] {
 .error {
     color: #ff6600; /* Oranssi */
     font-size: 0.9em;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 10px;
 }
 
 /* Lähetä-painike */

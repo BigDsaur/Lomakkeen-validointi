@@ -9,23 +9,43 @@
   <body>
     <form id="registrationForm" onsubmit="return validateForm()">
       <label for="userId">Käyttäjä ID:</label><br />
-      <input type="text" id="userId" name="userId" /><br />
+      <input
+        type="text"
+        id="userId"
+        name="userId"
+        oninput="validateInput('userId')"
+      /><br />
       <small class="error" id="userIdError"></small><br />
 
       <label for="password">Salasana:</label><br />
-      <input type="password" id="password" name="password" /><br />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        oninput="validateInput('password')"
+      /><br />
       <small class="error" id="passwordError"></small><br />
 
       <label for="email">Sähköposti:</label><br />
-      <input type="text" id="email" name="email" /><br />
+      <input
+        type="text"
+        id="email"
+        name="email"
+        oninput="validateInput('email')"
+      /><br />
       <small class="error" id="emailError"></small><br />
 
       <label for="postalCode">Postinumero:</label><br />
-      <input type="text" id="postalCode" name="postalCode" /><br />
+      <input
+        type="text"
+        id="postalCode"
+        name="postalCode"
+        oninput="validateInput('postalCode')"
+      /><br />
       <small class="error" id="postalCodeError"></small><br />
 
       <label for="country">Maa:</label><br />
-      <select id="country" name="country">
+      <select id="country" name="country" onchange="validateInput('country')">
         <option value="">Valitse maa</option>
         <option value="FI">Suomi</option>
         <option value="SE">Ruotsi</option>
@@ -35,13 +55,22 @@
       <small class="error" id="countryError"></small><br />
 
       <label>Sukupuoli:</label><br />
-      <input type="radio" id="male" name="gender" value="male" />
+      <input
+        type="radio"
+        id="male"
+        name="gender"
+        value="male"
+        onclick="validateInput('gender')"
+      />
       <label for="male">Mies</label>
-      <input type="radio" id="female" name="gender" value="female" />
-      <label for="female">Nainen</label>
-      <input type="radio" id="other" name="gender" value="other" />
-      <label for="other">Muu</label><br />
-      <small class="error" id="genderError"></small><br />
+      <input
+        type="radio"
+        id="female"
+        name="gender"
+        value="female"
+        onclick="validateInput('gender')"
+      />
+      <label for="female">Nainen</label><br />
 
       <label for="additionalInfo">Lisätietoja:</label><br />
       <textarea id="additionalInfo" name="additionalInfo"></textarea
