@@ -1,4 +1,5 @@
-function validateForm() {
+function validateForm(event) {
+    event.preventDefault()
     let isValid = true;
 
     // Käyttäjä ID tarkistus
